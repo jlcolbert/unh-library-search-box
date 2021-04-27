@@ -70,6 +70,8 @@ Note: Ideally, you would just reuse and map an existing Library Search Box widge
 
 #### Local System for Editing
 
+Follow the [Arctic Ice Studio Git Style Guide](https://github.com/arcticicestudio/styleguide-git) when making local edits.
+
 1. Install the most recent LTS version of Node.js and npm
 
 I use [nvm](https://github.com/nvm-sh/nvm) (specifically, [a plugin](https://github.com/lukechilds/zsh-nvm) for [Oh My Zsh](https://ohmyz.sh/)) to manage my Node.js installs, but you can download directly from the [Node.js website](https://nodejs.dev/)
