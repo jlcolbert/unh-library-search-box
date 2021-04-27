@@ -1,0 +1,13 @@
+{
+  "name": "unh-library-search-box",
+  "author": {
+    "name": "Jay L. Colbert",
+    "email": "jay.colbert@unh.edu",
+    "url": "https://github.com/jlcolbert/"
+  },
+  "description": "",
+  "repository": {},
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}

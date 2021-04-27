@@ -1,0 +1,16 @@
+{
+  "name": "unh-library-search-box",
+  "author": {
+    "name": "Jay L. Colbert",
+    "email": "jay.colbert@unh.edu",
+    "url": "https://github.com/jlcolbert/"
+  },
+  "description": "The Library Search Box embed codes for the University of New Hampshire Libraries, specifically for LibGuides",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlcolbert/unh-library-search-box.git"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}

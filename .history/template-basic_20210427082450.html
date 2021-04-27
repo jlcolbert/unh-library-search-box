@@ -1,0 +1,38 @@
+<div class="pane-content">
+  <!-- Script that converts the query string into valid parameter -->
+  <script>
+    function searchPrimo() {
+      document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
+      document.forms["searchForm"].submit();
+    }
+  </script>
+  <div class="row g-3">
+
+    <
+    <div class="center-block col-xs-6 col-md-5 col-lg-4 clearfix">
+      <form id="campus" name="searchForm" method="get" target="_self"
+        action="https://unh.primo.exlibrisgroup.com/discovery/search"
+        enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimo()">
+
+        <!-- Customizable parameters -->
+        <input type="hidden" name="vid" value="01USNH_UNH:VIEW">
+        <input type="hidden" name="tab" value="everything">
+        <input type="hidden" name="search_scope" value="MyInst_and_CI">
+        <input type="hidden" name="lang" value="en">
+
+        <!-- Fixed parameters-->
+        <input type="hidden" name="query" id="primoQuery">
+
+        <!-- Search Box -->
+        <div class="form-group">
+          <input class="form-control form-control-sm" type="text" id="primoQueryTemp" value=""
+            placeholder="UNH CAMPUS Library Search Box">
+
+          <!-- Search Button -->
+          <input id="button" title="Search" onclick="searchPrimo()" type="button" value="Search" alt="Search"
+            style="height: 22px; font-size: 12px; font-weight: bold; background: #cb4d0b; color: #ffffff; border: 1px solid;">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

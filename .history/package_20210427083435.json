@@ -1,0 +1,6 @@
+{
+  "name": "unh-library-search-box",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}

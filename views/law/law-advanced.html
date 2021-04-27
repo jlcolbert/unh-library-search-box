@@ -1,0 +1,84 @@
+<div class="pane-content">
+  <!-- Script that converts the query string into valid parameter -->
+  <script>
+    function searchPrimo() {
+      document.getElementById("primoQuery").value =
+        "any,contains," +
+        document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
+      document.forms["searchForm"].submit();
+    }
+  </script>
+  <div class="row g-3">
+    <!-- Law -->
+    <div class="center-block col-xs-12 col-md-11 col-lg-9 clearfix">
+      <form
+        id="law"
+        name="searchForm"
+        method="get"
+        target="_self"
+        action="https://unh.primo.exlibrisgroup.com/discovery/search"
+        enctype="application/x-www-form-urlencoded; charset=UTF-8"
+        onsubmit="searchPrimo()"
+      >
+        <!-- Customizable Parameters -->
+        <input type="hidden" name="vid" value="01USNH_UNH:LAW" />
+        <input type="hidden" name="tab" value="Everything" />
+        <input type="hidden" name="search_scope" value="MyInst_and_CI" />
+        <input type="hidden" name="lang" value="en" />
+
+        <!-- Fixed parameters -->
+        <input type="hidden" name="query" id="primoQuery" />
+
+        <!-- Search Box -->
+        <div class="form-group">
+          <label for="primoQueryTemp" class="sr-only"
+            >Articles from many (but not all) databases, books, DVDs, music, and
+            more</label
+          >
+          <div class="input-group input-group-lg">
+            <input
+              type="search"
+              name="s"
+              id="primoQueryTemp"
+              class="form-control"
+              value=""
+              placeholder="Articles, books, media, and more - CAMPUS"
+            />
+            <div class="input-group-btn search-options">
+              <label for="searchLaw" class="sr-only">Search</label>
+              <button class="btn btn-secondary" id="searchLaw">
+                <i
+                  class="icon glyphicon glyphicon-search"
+                  aria-hidden="true"
+                ></i>
+              </button>
+              <a
+                class="btn btn-link"
+                href="https://unh.primo.exlibrisgroup.com/discovery/search?tab=Everything&vid=01USNH_UNH:LAW&lang=en&offset=0&mode=advanced"
+                >Advanced</a
+              >
+            </div>
+          </div>
+
+          <!-- Search Button -->
+          <input
+            alt="Search"
+            id="button"
+            onclick="searchPrimo()"
+            style="
+              height: 22px;
+              font-size: 12px;
+              font-weight: bold;
+              background: #cb4d0b;
+              color: #ffffff;
+              border: 1px solid;
+            "
+            title="Search"
+            type="button"
+            value="Search"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
